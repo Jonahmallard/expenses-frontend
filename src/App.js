@@ -1,15 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
+import fetchAccounts from "./actions/fetchAccounts";
+import AccountsContainer from "./containers/AccountsContainer";
 
 class App extends React.Component {
   render() {
-    return <div className="App">App</div>;
+    return (
+      <div className="App">
+        <AccountsContainer />
+      </div>
+    );
   }
 }
 
-export default App;
-
-// componentDidMount() {
-//   fetch("http://localhost:3000/accounts")
-//     .then((res) => res.json())
-//     .then((data) => console.log(data));
+// const mapStateToProps = (state) => {
+//   return {
+//     accounts: state.accounts
+//   }
 // }
+
+export default connect()(App);
