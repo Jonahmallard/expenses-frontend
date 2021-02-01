@@ -6,7 +6,7 @@ class TransactionsContainer extends React.Component {
   render() {
     return (
       <div>
-        <TransactionForm />
+        <TransactionForm account={this.props.account} />
         <Transactions
           transactions={this.props.account && this.props.account.transactions}
         />
