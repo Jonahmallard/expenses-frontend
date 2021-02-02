@@ -8,8 +8,12 @@ export const addTransaction = (transaction, accountId) => {
       body: JSON.stringify(transaction),
     })
       .then((res) => res.json())
-      .then((account) =>
-        dispatch({ type: "ADD_TRANSACTION", payload: account })
-      );
+      .then((account) => {
+        if (account.error) {
+          alert(account.error);
+        } else {
+          dispatch({ type: "ADD_TRANSACTION", payload: account });
+        }
+      });
   };
 };

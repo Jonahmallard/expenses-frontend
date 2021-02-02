@@ -1,5 +1,6 @@
 import React from "react";
 // import { Redirect } from "react-router-dom";
+import EditAccountPage from "./EditAccountPage";
 
 import TransactionsContainer from "../containers/TransactionsContainer";
 
@@ -17,6 +18,9 @@ const AccountPage = (props) => {
         {account ? account.name : null} - {account ? account.balance : null}
       </h1>
       <TransactionsContainer account={account} />
+      <br />
+      <br />
+      <EditAccountPage account={account} />
     </div>
   );
 };

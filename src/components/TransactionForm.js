@@ -36,7 +36,7 @@ class TransactionForm extends React.Component {
             <option>deposit</option>
             <option>withdraw</option>
           </select>
-          &nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <label>Transaction Amount: </label>
           <input
             type="text"
